@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ad Click Fraud Detection</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+text-align:center;
+
+background-image:url("{{ url_for('static', filename='images/fraud.png') }}");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+
+/* dark overlay */
+.overlay{
+background:rgba(0,0,0,0.65);
+height:100vh;
+width:100%;
+position:absolute;
+top:0;
+left:0;
+}
+
+/* title */
+.title{
+font-size:60px;
+font-weight:bold;
+margin-top:80px;
+color:#00eaff;
+text-shadow:0 0 20px #00eaff;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #00eaff;}
+to{ text-shadow:0 0 30px #00eaff;}
+}
+
+/* buttons */
+.menu{
+margin-top:70px;
+}
+
+.menu button{
+padding:15px 35px;
+margin:15px;
+font-size:20px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+color:white;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+transition:0.4s;
+}
+
+.menu button:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00eaff;
+}
+
+/* description box */
+
+#descriptionBox{
+position:fixed;
+left:-800px;
+top:50%;
+transform:translateY(-50%);
+width:700px;
+background:rgba(0,0,0,0.9);
+padding:40px;
+border-radius:10px;
+font-size:22px;
+text-align:left;
+transition:1s;
+color:white;
+box-shadow:0 0 30px cyan;
+}
+
+#descriptionBox h2{
+color:#00eaff;
+}
+
+</style>
+
+<script>
+
+function showDescription(){
+
+var box=document.getElementById("descriptionBox");
+
+box.style.left="50%";
+box.style.transform="translate(-50%,-50%)";
+
+/* hide after 10 seconds */
+
+setTimeout(function(){
+
+box.style.left="-800px";
+
+},10000);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="title">
+AD CLICK FRAUD DETECTION USING MACHINE LEARNING AND DEEP LEARNING
+</div>
+
+<!-- <div style="font-size:30px;margin-top:10px;color:#ffffff;">
+Machine Learning & Deep Learning
+</div> -->
+
+<div class="menu">
+
+<button onclick="window.location.href='index'">Home</button>
+
+<button onclick="window.location.href='UserLogin'">Login</button>
+
+<button onclick="showDescription()">Description</button>
+
+</div>
+
+</div>
+
+
+<div id="descriptionBox">
+
+<h2>Project Description</h2>
+
+<p>
+
+This project detects click fraud in online advertising using Machine Learning and Deep Learning models. By analyzing user behavior patterns, it identifies and filters fraudulent clicks, helping advertisers protect budgets and ensure reliable ad performance.
+
+<br><br>
+
+<b>Key Features of the Project:</b>
+
+<br><br>
+
+• Real-time click analysis  
+<br>
+• User behavior pattern recognition  
+<br>
+• Detection of abnormal click frequency  
+<br>
+• IP address and device tracking  
+<br>
+• Time-based activity analysis (click intervals, session patterns)  
+<br>
+• Machine Learning & Deep Learning model integration  
+<br>
+• High accuracy fraud classification  
+<br>
+• Scalable system for large datasets  
+
+</p>
+
+</div>
+
+</body>
+</html>

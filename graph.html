@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Result</title>
+
+    <style>
+        .back-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            background: #ff4d4d;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body style="background:black; color:white; text-align:center;">
+
+<h2>📊 Fraud Detection Graph Result</h2>
+
+<!-- SAFE BACK BUTTON -->
+<a href="/Dashboard">
+    <button class="back-btn">
+        🔙 Back
+    </button>
+</a>
+
+<img src="/static/result.png" width="500" style="border-radius:10px; box-shadow:0 0 10px cyan;">
+
+<br><br>
+
+<h3>Fraud Percentage: {{ prediction }}%</h3>
+
+</body>
+</html>

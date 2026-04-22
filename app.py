@@ -18,7 +18,12 @@ app = Flask(__name__)
 app.secret_key = 'welcome'
 
 # ================= DATA PREPROCESS =================
-dataset = pd.read_csv("Dataset/click_fraud_dataset.csv")
+file_path = "Dataset/click_fraud_dataset.csv"
+
+if not os.path.exists(file_path):
+    file_path = "click_fraud_dataset.csv"
+
+dataset = pd.read_csv(file_path)
 labels = ['Human Clicked', 'Bot Clicked']
 
 label_encoder = []
